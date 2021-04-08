@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html lang="cs" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Citát dne</title>
@@ -7,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <style>
+    <style th:inline="text">
         body {
-            background-image: url(https://source.unsplash.com/RFHFV7lVQBY/1600x900);
+            background-image: url(https://source.unsplash.com/[[${obrazek}]]);
         }
     </style>
 </head>
 <body>
-<blockquote><strong>Debugging</strong> /de·bugh·ing/ <em>verb</em><br/>The Classic Mystery Game where you are the detective, the victim, and the murderer.</blockquote>
+<blockquote> <span th:text="${citat}"> Nějaký citát </span> </blockquote>
 </body>
 </html>
